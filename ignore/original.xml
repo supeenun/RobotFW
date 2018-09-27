@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180927 16:26:12.356">
+<suite id="s1" name="Ignorefailed" source="D:\GitHubRobotFW\ignore\ignorefailed.robot">
+<test id="s1-t1" name="TestCritical">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is critical test</arg>
+</arguments>
+<msg timestamp="20180927 16:26:12.485" level="INFO">This is critical test</msg>
+<status status="PASS" starttime="20180927 16:26:12.485" endtime="20180927 16:26:12.485"></status>
+</kw>
+<doc>Critical Test Case</doc>
+<tags>
+<tag>regression</tag>
+</tags>
+<status status="PASS" starttime="20180927 16:26:12.483" endtime="20180927 16:26:12.486" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TestNonCritical">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is non-critical test</arg>
+</arguments>
+<msg timestamp="20180927 16:26:12.489" level="INFO">This is non-critical test</msg>
+<status status="PASS" starttime="20180927 16:26:12.489" endtime="20180927 16:26:12.489"></status>
+</kw>
+<kw name="Fail" library="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20180927 16:26:12.490" level="FAIL">AssertionError</msg>
+<status status="FAIL" starttime="20180927 16:26:12.490" endtime="20180927 16:26:12.490"></status>
+</kw>
+<doc>Non-Critical Test Case</doc>
+<tags>
+<tag>development</tag>
+</tags>
+<status status="FAIL" starttime="20180927 16:26:12.487" endtime="20180927 16:26:12.491" critical="yes">AssertionError</status>
+</test>
+<status status="FAIL" starttime="20180927 16:26:12.357" endtime="20180927 16:26:12.492"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">development</stat>
+<stat pass="1" fail="0">regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Ignorefailed">Ignorefailed</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

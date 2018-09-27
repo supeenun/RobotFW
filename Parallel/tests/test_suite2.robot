@@ -29,5 +29,5 @@ Search Google
     Search Page Should Be Open
     Submit Credentials
     Please Wait Data
-        [Teardown]    Close Browser
+    Close Browser
 

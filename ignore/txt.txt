@@ -1,0 +1,6 @@
+robot -d result critical_test.robot
+robot -d result -c regression critical_test.robot
+--------------------------------
+
+robot --rerunfailed original.xml --output rerun.xml ignorefailed.robot
+robot --rerunfailed original.xml --output rerun.xml ignorefailed.robot

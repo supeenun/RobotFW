@@ -1,0 +1,10 @@
+tmp
+pabot_results
+build
+dist
+.DS_Store
+*.egg-info
+*.pyc
+.idea
+*.html
+*.xml

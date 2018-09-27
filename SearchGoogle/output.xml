@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180926 16:48:45.380">
-<suite id="s1" name="Search" source="D:\RobotFramework\LoginFB\search.robot">
+<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180927 16:03:22.009">
+<suite id="s1" name="searchHeadless" source="D:\GitHubRobotFW\SearchGoogle\searchHeadless.robot">
 <test id="s1-t1" name="Search Google">
 <kw name="Open Browser To Search Page">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>${URL_GOOGLE}</arg>
-<arg>${BROWSER}</arg>
+<arg>headlesschrome</arg>
 </arguments>
-<msg timestamp="20180926 16:48:45.505" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20180926 16:48:45.505" endtime="20180926 16:48:51.900"></status>
+<msg timestamp="20180927 16:03:22.141" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20180927 16:03:22.141" endtime="20180927 16:03:25.968"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20180926 16:48:51.900" endtime="20180926 16:48:53.028"></status>
+<status status="PASS" starttime="20180927 16:03:25.968" endtime="20180927 16:03:27.082"></status>
 </kw>
-<status status="PASS" starttime="20180926 16:48:45.505" endtime="20180926 16:48:53.028"></status>
+<status status="PASS" starttime="20180927 16:03:22.140" endtime="20180927 16:03:27.083"></status>
 </kw>
 <kw name="Search Page Should Be Open">
 <kw name="Input Text" library="Selenium2Library">
@@ -25,35 +25,23 @@
 <arg>${input_data}</arg>
 <arg>Test Framework</arg>
 </arguments>
-<msg timestamp="20180926 16:48:53.028" level="INFO">Typing text 'Test Framework' into text field '//*[@id="lst-ib"]'.</msg>
-<status status="PASS" starttime="20180926 16:48:53.028" endtime="20180926 16:48:53.173"></status>
+<msg timestamp="20180927 16:03:27.085" level="INFO">Typing text 'Test Framework' into text field '//*[@id="lst-ib"]'.</msg>
+<status status="PASS" starttime="20180927 16:03:27.084" endtime="20180927 16:03:27.234"></status>
 </kw>
-<status status="PASS" starttime="20180926 16:48:53.028" endtime="20180926 16:48:53.173"></status>
+<status status="PASS" starttime="20180927 16:03:27.083" endtime="20180927 16:03:27.234"></status>
 </kw>
-<kw name="Submit Credentials">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>${btn_search}</arg>
-</arguments>
-<msg timestamp="20180926 16:48:53.174" level="INFO">Clicking button '//*[@name="btnK"]'.</msg>
-<status status="PASS" starttime="20180926 16:48:53.174" endtime="20180926 16:48:55.868"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180927 16:03:27.452" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180927 16:03:27.234" endtime="20180927 16:03:27.452"></status>
 </kw>
-<status status="PASS" starttime="20180926 16:48:53.173" endtime="20180926 16:48:55.868"></status>
+<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20180927 16:03:27.453" endtime="20180927 16:03:29.506"></status>
 </kw>
-<kw name="Please Wait Data">
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Test Framework</arg>
-</arguments>
-<status status="PASS" starttime="20180926 16:48:55.869" endtime="20180926 16:48:55.892"></status>
-</kw>
-<status status="PASS" starttime="20180926 16:48:55.869" endtime="20180926 16:48:55.892"></status>
-</kw>
-<status status="PASS" starttime="20180926 16:48:45.505" endtime="20180926 16:48:55.892" critical="yes"></status>
+<status status="PASS" starttime="20180927 16:03:22.140" endtime="20180927 16:03:29.507" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20180926 16:48:45.380" endtime="20180926 16:48:55.894"></status>
+<status status="PASS" starttime="20180927 16:03:22.010" endtime="20180927 16:03:29.511"></status>
 </suite>
 <statistics>
 <total>
@@ -63,7 +51,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Search">Search</stat>
+<stat pass="1" fail="0" id="s1" name="searchHeadless">searchHeadless</stat>
 </suite>
 </statistics>
 <errors>

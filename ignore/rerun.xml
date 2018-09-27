@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180927 16:27:18.044">
+<suite id="s1" name="Ignorefailed" source="D:\GitHubRobotFW\ignore\ignorefailed.robot">
+<test id="s1-t1" name="TestNonCritical">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This is non-critical test</arg>
+</arguments>
+<msg timestamp="20180927 16:27:18.174" level="INFO">This is non-critical test</msg>
+<status status="PASS" starttime="20180927 16:27:18.174" endtime="20180927 16:27:18.174"></status>
+</kw>
+<doc>Non-Critical Test Case</doc>
+<tags>
+<tag>development</tag>
+</tags>
+<status status="PASS" starttime="20180927 16:27:18.173" endtime="20180927 16:27:18.175" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180927 16:27:18.045" endtime="20180927 16:27:18.176"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">development</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Ignorefailed">Ignorefailed</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
