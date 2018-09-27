@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180926 16:48:45.380">
+<suite id="s1" name="Search" source="D:\RobotFramework\LoginFB\search.robot">
+<test id="s1-t1" name="Search Google">
+<kw name="Open Browser To Search Page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL_GOOGLE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180926 16:48:45.505" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20180926 16:48:45.505" endtime="20180926 16:48:51.900"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180926 16:48:51.900" endtime="20180926 16:48:53.028"></status>
+</kw>
+<status status="PASS" starttime="20180926 16:48:45.505" endtime="20180926 16:48:53.028"></status>
+</kw>
+<kw name="Search Page Should Be Open">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${input_data}</arg>
+<arg>Test Framework</arg>
+</arguments>
+<msg timestamp="20180926 16:48:53.028" level="INFO">Typing text 'Test Framework' into text field '//*[@id="lst-ib"]'.</msg>
+<status status="PASS" starttime="20180926 16:48:53.028" endtime="20180926 16:48:53.173"></status>
+</kw>
+<status status="PASS" starttime="20180926 16:48:53.028" endtime="20180926 16:48:53.173"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_search}</arg>
+</arguments>
+<msg timestamp="20180926 16:48:53.174" level="INFO">Clicking button '//*[@name="btnK"]'.</msg>
+<status status="PASS" starttime="20180926 16:48:53.174" endtime="20180926 16:48:55.868"></status>
+</kw>
+<status status="PASS" starttime="20180926 16:48:53.173" endtime="20180926 16:48:55.868"></status>
+</kw>
+<kw name="Please Wait Data">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Test Framework</arg>
+</arguments>
+<status status="PASS" starttime="20180926 16:48:55.869" endtime="20180926 16:48:55.892"></status>
+</kw>
+<status status="PASS" starttime="20180926 16:48:55.869" endtime="20180926 16:48:55.892"></status>
+</kw>
+<status status="PASS" starttime="20180926 16:48:45.505" endtime="20180926 16:48:55.892" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180926 16:48:45.380" endtime="20180926 16:48:55.894"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Search">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
