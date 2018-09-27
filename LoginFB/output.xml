@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180927 10:36:38.863">
+<suite id="s1" name="LoginFacebook" source="D:\RobotFramework\LoginFB\LoginFacebook.robot">
+<test id="s1-t1" name="Login facebook - Fail">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180927 10:36:38.998" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20180927 10:36:38.998" endtime="20180927 10:36:41.532"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_facebook}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:41.533" level="INFO">Opening url 'https://www.facebook.com'</msg>
+<status status="PASS" starttime="20180927 10:36:41.532" endtime="20180927 10:36:49.676"></status>
+</kw>
+<kw name="Verify facebook page">
+<arguments>
+<arg>${title_facebook}</arg>
+</arguments>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.681" level="INFO">Page title is 'Facebook - เข้าสู่ระบบหรือสมัครใช้งาน'.</msg>
+<status status="PASS" starttime="20180927 10:36:49.677" endtime="20180927 10:36:49.681"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:36:49.676" endtime="20180927 10:36:49.681"></status>
+</kw>
+<kw name="Input Username and Password">
+<arguments>
+<arg>${input_user}</arg>
+<arg>${input_pass}</arg>
+<arg>${username_fail}</arg>
+<arg>${password_fail}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${xpath_user}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.715" level="INFO">Element '//*[@id="email"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:36:49.682" endtime="20180927 10:36:49.715"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${xpath_pass}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.742" level="INFO">Element '//*[@id="pass"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:36:49.716" endtime="20180927 10:36:49.742"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${xpath_user}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.743" level="INFO">Typing text 'xxxxx@xxxxx.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20180927 10:36:49.743" endtime="20180927 10:36:49.866"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${xpath_pass}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.866" level="INFO">Typing text '12345678' into text field '//*[@id="pass"]'.</msg>
+<status status="PASS" starttime="20180927 10:36:49.866" endtime="20180927 10:36:49.952"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:36:49.682" endtime="20180927 10:36:49.952"></status>
+</kw>
+<kw name="Click Button Login">
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.985" level="INFO">Element '//*[@class="uiButton uiButtonConfirm"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:36:49.953" endtime="20180927 10:36:49.985"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:49.985" level="INFO">Clicking element '//*[@class="uiButton uiButtonConfirm"]'.</msg>
+<status status="PASS" starttime="20180927 10:36:49.985" endtime="20180927 10:36:51.855"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:36:49.953" endtime="20180927 10:36:51.855"></status>
+</kw>
+<kw name="Verify Login Fail">
+<arguments>
+<arg>${txt_not_me}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${xpath}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180927 10:36:52.224" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180927 10:36:51.870" endtime="20180927 10:36:52.224"></status>
+</kw>
+<msg timestamp="20180927 10:36:52.226" level="FAIL">Element with locator '//*[@id="not_me_link"]' not found.</msg>
+<status status="FAIL" starttime="20180927 10:36:51.856" endtime="20180927 10:36:52.226"></status>
+</kw>
+<status status="FAIL" starttime="20180927 10:36:51.855" endtime="20180927 10:36:52.226"></status>
+</kw>
+<tags>
+<tag>fail</tag>
+</tags>
+<status status="FAIL" starttime="20180927 10:36:38.997" endtime="20180927 10:36:52.227" critical="yes">Element with locator '//*[@id="not_me_link"]' not found.</status>
+</test>
+<test id="s1-t2" name="Login facebook - success">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180927 10:36:52.229" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20180927 10:36:52.229" endtime="20180927 10:36:54.680"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url_facebook}</arg>
+</arguments>
+<msg timestamp="20180927 10:36:54.680" level="INFO">Opening url 'https://www.facebook.com'</msg>
+<status status="PASS" starttime="20180927 10:36:54.680" endtime="20180927 10:37:04.573"></status>
+</kw>
+<kw name="Verify facebook page">
+<arguments>
+<arg>${title_facebook}</arg>
+</arguments>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.578" level="INFO">Page title is 'Facebook - เข้าสู่ระบบหรือสมัครใช้งาน'.</msg>
+<status status="PASS" starttime="20180927 10:37:04.574" endtime="20180927 10:37:04.579"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:37:04.574" endtime="20180927 10:37:04.579"></status>
+</kw>
+<kw name="Input Username and Password">
+<arguments>
+<arg>${input_user}</arg>
+<arg>${input_pass}</arg>
+<arg>${username_success}</arg>
+<arg>${password_success}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${xpath_user}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.610" level="INFO">Element '//*[@id="email"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:37:04.580" endtime="20180927 10:37:04.610"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${xpath_pass}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.640" level="INFO">Element '//*[@id="pass"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:37:04.611" endtime="20180927 10:37:04.640"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${xpath_user}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.641" level="INFO">Typing text 'safety2824@hotmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20180927 10:37:04.640" endtime="20180927 10:37:04.815"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${xpath_pass}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.815" level="INFO">Typing text 'ss280228' into text field '//*[@id="pass"]'.</msg>
+<status status="PASS" starttime="20180927 10:37:04.815" endtime="20180927 10:37:04.900"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:37:04.579" endtime="20180927 10:37:04.900"></status>
+</kw>
+<kw name="Click Button Login">
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.938" level="INFO">Element '//*[@class="uiButton uiButtonConfirm"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:37:04.902" endtime="20180927 10:37:04.938"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:04.939" level="INFO">Clicking element '//*[@class="uiButton uiButtonConfirm"]'.</msg>
+<status status="PASS" starttime="20180927 10:37:04.938" endtime="20180927 10:37:17.648"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:37:04.901" endtime="20180927 10:37:17.649"></status>
+</kw>
+<kw name="Verify Login Success">
+<arguments>
+<arg>${txt_message}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${xpath}</arg>
+</arguments>
+<msg timestamp="20180927 10:37:17.701" level="INFO">Element '//div//textarea[@name="xhpc_message"]' is displayed.</msg>
+<status status="PASS" starttime="20180927 10:37:17.654" endtime="20180927 10:37:17.702"></status>
+</kw>
+<status status="PASS" starttime="20180927 10:37:17.653" endtime="20180927 10:37:17.702"></status>
+</kw>
+<tags>
+<tag>success</tag>
+</tags>
+<status status="PASS" starttime="20180927 10:36:52.229" endtime="20180927 10:37:17.702" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180927 10:37:17.703" endtime="20180927 10:37:20.020"></status>
+</kw>
+<status status="FAIL" starttime="20180927 10:36:38.864" endtime="20180927 10:37:20.020"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">fail</stat>
+<stat pass="1" fail="0">success</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="LoginFacebook">LoginFacebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
