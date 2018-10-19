@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20180927 16:03:22.009">
-<suite id="s1" name="searchHeadless" source="D:\GitHubRobotFW\SearchGoogle\searchHeadless.robot">
+<robot generator="Robot 3.0.4 (Python 3.6.6 on win32)" generated="20181003 14:05:08.563">
+<suite id="s1" name="Search" source="D:\GitHubRobotFW\SearchGoogle\search.robot">
 <test id="s1-t1" name="Search Google">
 <kw name="Open Browser To Search Page">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>${URL_GOOGLE}</arg>
-<arg>headlesschrome</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180927 16:03:22.141" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20180927 16:03:22.141" endtime="20180927 16:03:25.968"></status>
+<msg timestamp="20181003 14:05:09.197" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20181003 14:05:09.197" endtime="20181003 14:05:16.636"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20180927 16:03:25.968" endtime="20180927 16:03:27.082"></status>
+<status status="PASS" starttime="20181003 14:05:16.637" endtime="20181003 14:05:17.757"></status>
 </kw>
-<status status="PASS" starttime="20180927 16:03:22.140" endtime="20180927 16:03:27.083"></status>
+<status status="PASS" starttime="20181003 14:05:09.196" endtime="20181003 14:05:17.757"></status>
 </kw>
 <kw name="Search Page Should Be Open">
 <kw name="Input Text" library="Selenium2Library">
@@ -25,35 +25,63 @@
 <arg>${input_data}</arg>
 <arg>Test Framework</arg>
 </arguments>
-<msg timestamp="20180927 16:03:27.085" level="INFO">Typing text 'Test Framework' into text field '//*[@id="lst-ib"]'.</msg>
-<status status="PASS" starttime="20180927 16:03:27.084" endtime="20180927 16:03:27.234"></status>
+<msg timestamp="20181003 14:05:17.758" level="INFO">Typing text 'Test Framework' into text field '//*[@id="lst-ib"]'.</msg>
+<status status="PASS" starttime="20181003 14:05:17.758" endtime="20181003 14:05:17.995"></status>
 </kw>
-<status status="PASS" starttime="20180927 16:03:27.083" endtime="20180927 16:03:27.234"></status>
+<status status="PASS" starttime="20181003 14:05:17.758" endtime="20181003 14:05:17.996"></status>
 </kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_search}</arg>
+</arguments>
+<msg timestamp="20181003 14:05:17.997" level="INFO">Clicking button '//*[@name="btnK"]'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180927 16:03:27.452" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20180927 16:03:27.234" endtime="20180927 16:03:27.452"></status>
+<msg timestamp="20181003 14:05:18.383" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20181003 14:05:18.074" endtime="20181003 14:05:18.383"></status>
 </kw>
-<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20180927 16:03:27.453" endtime="20180927 16:03:29.506"></status>
+<msg timestamp="20181003 14:05:18.734" level="FAIL">WebDriverException: Message: unknown error: Element &lt;input value="ค้นหาด้วย Google" aria-label="ค้นหาด้วย Google" name="btnK" type="submit" jsaction="sf.chk"&gt; is not clickable at point (590, 411). Other element would receive the click: &lt;div class="sbqs_c"&gt;...&lt;/div&gt;
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20181003 14:05:17.996" endtime="20181003 14:05:18.734"></status>
 </kw>
-<status status="PASS" starttime="20180927 16:03:22.140" endtime="20180927 16:03:29.507" critical="yes"></status>
+<status status="FAIL" starttime="20181003 14:05:17.996" endtime="20181003 14:05:18.735"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20181003 14:05:18.735" endtime="20181003 14:05:21.344"></status>
+</kw>
+<status status="FAIL" starttime="20181003 14:05:09.196" endtime="20181003 14:05:21.345" critical="yes">WebDriverException: Message: unknown error: Element &lt;input value="ค้นหาด้วย Google" aria-label="ค้นหาด้วย Google" name="btnK" type="submit" jsaction="sf.chk"&gt; is not clickable at point (590, 411). Other element would receive the click: &lt;div class="sbqs_c"&gt;...&lt;/div&gt;
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.17134 x86_64)
+</status>
 </test>
-<status status="PASS" starttime="20180927 16:03:22.010" endtime="20180927 16:03:29.511"></status>
+<status status="FAIL" starttime="20181003 14:05:08.564" endtime="20181003 14:05:21.353"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="searchHeadless">searchHeadless</stat>
+<stat pass="0" fail="1" id="s1" name="Search">Search</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20181003 14:05:09.194" level="ERROR">Error in file 'D:\GitHubRobotFW\SearchGoogle\search.robot': Importing test library 'AllureReportLibrary' failed: ModuleNotFoundError: No module named 'AllureListener'
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\site-packages\AllureReportLibrary\__init__.py", line 2, in &lt;module&gt;
+    from AllureListener import *
+PYTHONPATH:
+  c:\program files\python36\python36.zip
+  c:\program files\python36\DLLs
+  c:\program files\python36\lib
+  c:\program files\python36
+  c:\program files\python36\lib\site-packages</msg>
 </errors>
 </robot>

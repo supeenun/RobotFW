@@ -9,7 +9,7 @@ ${btn_search}        //*[@name="btnK"]
 
 *** Keywords ***
 Open Browser To Search Page
-    Open Browser    ${URL_GOOGLE}    ${BROWSER}     headlesschrome
+    Open Browser    ${URL_GOOGLE}    ${BROWSER}
     Maximize Browser Window
 
 
